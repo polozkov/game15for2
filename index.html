@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Пятнашки на двоих</title>
+    <link rel="stylesheet" href="main_css_for_game.css" />
+  </head>
+
+  <body>
+    <table id="id_game_table">
+      <tr>
+        <td class="class_game_cell" id="id_x0y0"></td>
+        <td class="class_game_cell" id="id_x1y0"></td>
+        <td class="class_game_cell" id="id_x2y0"></td>
+      </tr>
+      <tr>
+        <td class="class_game_cell" id="id_x0y1"></td>
+        <td class="class_game_cell" id="id_x1y1"></td>
+        <td class="class_game_cell" id="id_x2y1"></td>
+      </tr>
+      <tr>
+        <td class="class_game_cell" id="id_x0y2"></td>
+        <td class="class_game_cell" id="id_x1y2"></td>
+        <td class="class_game_cell" id="id_x2y2"></td>
+      </tr>
+    </table>
+
+    <table id="id_game_all_buttons">
+      <tr>
+        <td class="class_button_cell"></td>
+        <td class="class_button_cell">
+          Сам с собой<input id="id_flag_self" class="class_flag_cell" type="checkbox" />
+        </td>
+        <td class="class_button_cell">
+          Оценки<input id="id_flag_show_hints" class="class_flag_cell" type="checkbox" />
+        </td>
+      </tr>
+      <tr>
+        <td class="class_button_cell" id="id_play_back">Назад</td>
+        <td class="class_button_cell" id="id_play_comp">Ходи</td>
+        <td class="class_button_cell" id="id_play_new_game">Заново</td>
+      </tr>
+    </table>
+
+    <div id="id_div_info">
+      <h1>Пятнашки на двоих</h1>
+      <p>
+        Для игры понадобится квадратная доска 3х3, 4 белые и 4 чёрные шашки
+        (подойдут пешки, монеты, крышечки и т. п.). Доску легко начертить самим.
+      </p>
+
+      <p>
+        Цель игры - запереть противника. В начале доска пуста. Начинают белые.
+        Игроки по очереди выставляют по одной шашке на любые свободные клетки.
+      </p>
+
+      <p>
+        Когда все шашки выставлены, игроки по очереди делают ходы своим цветом
+        как в пятнашках (вверх, вниз, вправо, влево на свободное поле).
+      </p>
+
+      <p>Можно легко доказать, что ничья (повторением позиции) невозможна.</p>
+    </div>
+
+    <script type="text/javascript" src="js_1_1_AI_prepare.js"></script>
+    <script type="text/javascript" src="js_1_2_AI_negamax.js"></script>
+
+    <script type="text/javascript" src="js_2_1_G.js"></script>
+    <script type="text/javascript" src="js_2_2_G.js"></script>
+  </body>
+</html>
